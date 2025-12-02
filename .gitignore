@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.DS_Store
+.env
+.venv/
+logs/*.pdf
+logs/*.log
+logs/*.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+data/*
+!data/README.md
