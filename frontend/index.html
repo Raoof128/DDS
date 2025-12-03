@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepfake Detection Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Deepfake Detection System</h1>
+    <p class="subtitle">Educational, privacy-preserving deepfake forensics.</p>
+
+    <section class="card">
+      <h2>Upload Media</h2>
+      <input type="file" id="imageInput" accept="image/*" />
+      <input type="file" id="videoInput" accept="video/*" />
+      <input type="file" id="audioInput" accept="audio/*" />
+      <button id="analyzeBtn">Analyze</button>
+      <p class="hint">Only use synthetic or user-provided content. No real biometric data.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Vision</h3>
+        <p id="visionScore">Score: --</p>
+      </div>
+      <div class="card">
+        <h3>Temporal</h3>
+        <p id="temporalScore">Score: --</p>
+      </div>
+      <div class="card">
+        <h3>Audio</h3>
+        <p id="audioScore">Score: --</p>
+      </div>
+      <div class="card">
+        <h3>Metadata</h3>
+        <p id="metadataScore">Score: --</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Final Decision</h2>
+      <p id="deepfakeScore">Deepfake Score: --</p>
+      <p id="classification">Classification: --</p>
+      <p id="riskLevel">Risk Level: --</p>
+      <p id="confidence">Confidence: --</p>
+    </section>
+
+    <section class="card">
+      <h2>Explainability</h2>
+      <pre id="explainability">Awaiting analysis...</pre>
+    </section>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
