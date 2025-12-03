@@ -32,6 +32,11 @@ This guide summarizes how to run, test, and deploy the Deepfake Detection System
 - Lint: `ruff check .`
 - Formatting check: `black --check .`
 - Type checks: `mypy backend`
+- Full gate locally: `make ci` (mirrors CI pipeline)
+
+## CI/CD
+- GitHub Actions workflow `.github/workflows/ci.yml` installs dev dependencies with pip caching and runs `make ci` (lint, type checks, tests).
+- Treat warnings as actionable; keep dependencies updated to maintain cache efficiency and supply chain hygiene.
 
 ## Deployment Notes
 - For production, run Uvicorn/Gunicorn behind a reverse proxy (e.g., Nginx) and enforce TLS termination.

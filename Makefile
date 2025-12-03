@@ -1,4 +1,4 @@
-.PHONY: install lint format typecheck test run docker-build docker-run clean
+.PHONY: install lint format typecheck test ci run docker-build docker-run clean
 
 install:
 	python -m pip install --upgrade pip
@@ -16,6 +16,11 @@ typecheck:
 
 test:
 	pytest
+
+ci:
+	$(MAKE) lint
+	$(MAKE) typecheck
+	$(MAKE) test
 
 run:
 	uvicorn backend.main:app --reload

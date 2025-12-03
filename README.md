@@ -5,7 +5,7 @@ An educational, privacy-preserving Deepfake Detection System built with FastAPI 
 ## Repository Status
 - **Stack:** FastAPI backend, static JS dashboard, numpy/Pillow heuristics
 - **Safety:** Local-only processing, executable upload blocking, no biometric storage, synthetic defaults
-- **Quality:** CI (ruff, black, mypy, pytest), Docker image, Makefile for developer ergonomics
+- **Quality:** CI (pip-cached `make ci` running ruff, black, mypy, pytest), Docker image, Makefile for developer ergonomics
 
 ## Repository Tree
 ```
@@ -74,6 +74,7 @@ The workspace installs dev dependencies automatically and applies the configured
 make lint
 make typecheck
 make test
+make ci  # runs lint + typecheck + test (same as CI pipeline)
 ```
 
 ### Docker
